@@ -1,4 +1,7 @@
-
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="repository.JdbcPatientRepository" %>
+<%@ page import="model.Patient" %>
 <html>
 <body>
 <h2>Hello World!</h2>
@@ -12,14 +15,13 @@
         </tr>
         <%
             JdbcPatientRepository repository = new JdbcPatientRepository();
-            //JpaPatientRepository repository = new JpaPatientRepository();
             List<Patient> patient = repository.getAllPatients();
-            for (Patient patient : patients) {
+            for (Patient patients : patient) {
         %>
             <tr>
-                <td><%= patient.getId() %></td>
-                <td><%= patient.getName() %></td>
-                <td><%= patient.getEmail() %></td>
+                <td><%= patients.getId() %></td>
+                <td><%= patients.getName() %></td>
+                <td><%= patients.getEmail() %></td>
             </tr>
         <% } %>
     </table>
