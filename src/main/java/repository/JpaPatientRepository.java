@@ -30,7 +30,7 @@ public class JpaPatientRepository {
 
 
 
-    public void addStudent(Patient patient) {
+    public void addPatient(Patient patient) {
         entityManager.getTransaction().begin();
         entityManager.persist(patient);
         entityManager.getTransaction().commit();

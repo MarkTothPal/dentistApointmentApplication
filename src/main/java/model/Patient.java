@@ -25,22 +25,22 @@ public class Patient {
 //        )
 //        @Fetch(FetchMode.JOIN)
 //        private List<Service> services;
-//
-//
-//        public Patient(int id, String name, String email) {
-//            this.id = id;
-//            this.name = name;
-//            this.email = email;
-//        }
-//
-//
-//        public Patient(String name, String email) {
-//            this.name = name;
-//            this.email = email;
-//        }
-//        public Patient(){
-//
-//        }
+
+
+        public Patient(int id, String name, String email) {
+            this.id = id;
+            this.name = name;
+            this.email = email;
+        }
+
+
+        public Patient(String name, String email) {
+            this.name = name;
+            this.email = email;
+        }
+        public Patient(){
+
+        }
 //        public String getServicesAsCsv(){
 //            return getServices().stream().map(Service::getName).collect(Collectors.joining(", "));
 //        }

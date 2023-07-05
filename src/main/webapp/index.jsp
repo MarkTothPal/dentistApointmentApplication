@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="repository.JdbcPatientRepository" %>
+<%@ page import="repository.JpaPatientRepository" %>
 <%@ page import="model.Patient" %>
 <html>
 <body>
@@ -14,8 +15,9 @@
             <th>Email</th>
         </tr>
         <%
-            JdbcPatientRepository repository = new JdbcPatientRepository();
-            List<Patient> patient = repository.getAllPatients();
+            //JdbcPatientRepository repository = new JdbcPatientRepository();
+            JpaPatientRepository patientRepo = new JpaPatientRepository();
+            List<Patient> patient = patientRepo.getAllPatients();
             for (Patient patients : patient) {
         %>
             <tr>
@@ -25,5 +27,23 @@
             </tr>
         <% } %>
     </table>
+<br/>
+<br/>
+<h2>Add a patient</h2>
+
+    <form action="addPatient.jsp">
+        <div class="form-outline mb-4">
+            <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>
+        </div>
+        <div class="form-outline mb-4">
+            <input type="text" name="email"  value="Email..." onclick="this.value=''"/><br/>
+        </div>
+
+    <br/>
+    <input type="submit" value="Add Patient" class="btn btn-primary btn-block"/>
+    </form>
+
+    <h2>Do some magic</h2>
+
 </body>
 </html>
