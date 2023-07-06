@@ -1,15 +1,15 @@
-<%@ page import="model.Patient, repository.JpaPatientRepository" %>
+<%@ page import="model.Patient, repository.JdbcPatientRepository" %>
 
 
 <%
-  String name = request.getParameter("patient_name");
-  String email = request.getParameter("Patient_email");
+  String name = request.getParameter("name");
+  String email = request.getParameter("email");
 
   Patient patient = new Patient(name, email);
 
-  JpaPatientRepository patientRepo = new JpaPatientRepository();
+  JdbcPatientRepository repository = new JdbcPatientRepository();
 
-  patientRepo.addPatient(patient);
+  repository.addPatient(patient);
 
 %>
 

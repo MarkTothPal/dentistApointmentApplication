@@ -53,7 +53,7 @@ public class JdbcPatientRepository{
 
     public void addPatient(Patient patient) {
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("INSERT INTO patient (name, email) VALUES (?, ?)")) {
+             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.patients (patient_name, patient_email) VALUES (?, ?)")) {
 
             statement.setString(1, patient.getName());
             statement.setString(2, patient.getEmail());
@@ -61,6 +61,15 @@ public class JdbcPatientRepository{
 
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void updatePatient(Patient patient){
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement("")){
+
+        } catch (SQLException e) {
+    e.printStackTrace();
         }
     }
 

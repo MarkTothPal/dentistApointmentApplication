@@ -15,9 +15,9 @@
             <th>Email</th>
         </tr>
         <%
-            //JdbcPatientRepository repository = new JdbcPatientRepository();
-            JpaPatientRepository patientRepo = new JpaPatientRepository();
-            List<Patient> patient = patientRepo.getAllPatients();
+            JdbcPatientRepository repository = new JdbcPatientRepository();
+            //JpaPatientRepository patientRepo = new JpaPatientRepository();
+            List<Patient> patient = repository.getAllPatients();
             for (Patient patients : patient) {
         %>
             <tr>
