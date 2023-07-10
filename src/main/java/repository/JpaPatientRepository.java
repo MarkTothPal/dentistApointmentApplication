@@ -36,4 +36,10 @@ public class JpaPatientRepository {
         entityManager.getTransaction().commit();
         entityManager.close();
     }
+//    public void deletePatient(Patient patient) {
+//        entityManager.getTransaction().begin();
+//        entityManager.persist(patient);
+//        entityManager.getTransaction().commit();
+//        entityManager.close();
+//    }
 }
