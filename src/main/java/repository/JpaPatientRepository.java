@@ -14,7 +14,7 @@ public class JpaPatientRepository {
 
     public List<Patient> getAllPatients() {
 
-        TypedQuery<Patient> typedQuery = entityManager.createQuery("select s from Patient s", Patient.class);
+        TypedQuery<Patient> typedQuery = entityManager.createQuery("select s from patients s", Patient.class);
         List<Patient> patientList = typedQuery.getResultList();
         entityManager.close();
         emFactory.close();

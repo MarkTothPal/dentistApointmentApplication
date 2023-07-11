@@ -10,7 +10,11 @@ import org.hibernate.annotations.FetchMode;
 
 import java.util.List;
 import java.util.stream.Collectors;
-@Data
+@Getter
+@Setter
+@ToString
+@Entity
+@Table(name = "patients")
 public class Patient {
 
         private int id;
@@ -37,6 +41,9 @@ public class Patient {
         public Patient(String name, String email) {
             this.name = name;
             this.email = email;
+        }
+        public Patient(int id){
+            this.id = id;
         }
         public Patient(){
 

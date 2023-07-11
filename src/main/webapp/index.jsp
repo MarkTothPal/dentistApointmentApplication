@@ -13,10 +13,11 @@
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Delete</th>
         </tr>
         <%
             JdbcPatientRepository repository = new JdbcPatientRepository();
-            //JpaPatientRepository patientRepo = new JpaPatientRepository();
+            //JpaPatientRepository repository = new JpaPatientRepository();
             List<Patient> patient = repository.getAllPatients();
             for (Patient patients : patient) {
         %>
@@ -24,7 +25,9 @@
                 <td><%= patients.getId() %></td>
                 <td><%= patients.getName() %></td>
                 <td><%= patients.getEmail() %></td>
+                <td><a href="deletePatient.jsp?id=<%=patients.getId() %>"><button type="button"  class="delete">Delete</button></a></td>
             </tr>
+
         <% } %>
     </table>
 <br/>
