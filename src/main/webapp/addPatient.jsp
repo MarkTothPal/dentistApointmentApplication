@@ -15,4 +15,4 @@
 
 %>
 
-  <meta http-equiv="Refresh" content="0; url='/world" />
+  <meta http-equiv="Refresh" content="0; url='/dentistApointmentApplication" />

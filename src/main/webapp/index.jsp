@@ -43,8 +43,21 @@
         </div>
 
     <br/>
+
     <input type="submit" value="Add Patient" class="btn btn-primary btn-block"/>
+
     </form>
+  <h2> Delete a patient </h2>
+    <form action="deletePatient.jsp">
+        <div class="form-outline mb-4">
+            <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>
+        </div>
+        <div class="form-outline mb-4">
+                    <input type="text" name="email"  value="Email..." onclick="this.value=''"/><br/>
+                </div>
+  <br/>
+  <input type="submit" value="Delete Patient" class="btn btn-primary btn-block"/>
+
 
     <h2>Do some magic</h2>
 
