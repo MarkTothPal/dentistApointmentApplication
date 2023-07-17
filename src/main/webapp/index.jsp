@@ -5,7 +5,6 @@
 <%@ page import="model.Patient" %>
 <html>
 <body>
-<h2>Hello World!</h2>
 
 <h2>Patient List from the index.jsp file</h2>
     <table border="1" class="table table-striped table-hover w-50 p-3">
@@ -45,21 +44,6 @@
     <br/>
 
     <input type="submit" value="Add Patient" class="btn btn-primary btn-block"/>
-
-    </form>
-  <h2> Delete a patient </h2>
-    <form action="deletePatient.jsp">
-        <div class="form-outline mb-4">
-            <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>
-        </div>
-        <div class="form-outline mb-4">
-                    <input type="text" name="email"  value="Email..." onclick="this.value=''"/><br/>
-                </div>
-  <br/>
-  <input type="submit" value="Delete Patient" class="btn btn-primary btn-block"/>
-
-
-    <h2>Do some magic</h2>
 
 </body>
 </html>
