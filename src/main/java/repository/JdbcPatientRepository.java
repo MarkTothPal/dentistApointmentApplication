@@ -29,7 +29,7 @@ public class JdbcPatientRepository{
 
         try (Connection connection = getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patients")) {
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patient")) {
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("patient_id");
@@ -53,7 +53,7 @@ public class JdbcPatientRepository{
 
     public void addPatient(Patient patient) {
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.patients (patient_name, patient_email) VALUES (?, ?)")) {
+             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.patient(patient_name, patient_email) VALUES (?, ?)")) {
             statement.setString(1, patient.getName());
             statement.setString(2, patient.getEmail());
             statement.executeUpdate();
@@ -66,7 +66,7 @@ public class JdbcPatientRepository{
     public void deletePatient(int id){
 
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("DELETE FROM public.patients WHERE patient_id = ?")){
+             PreparedStatement statement = connection.prepareStatement("DELETE FROM public.patient WHERE patient_id = ?")){
             statement.setInt(1,id);
             statement.executeUpdate();
 
