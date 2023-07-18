@@ -6,10 +6,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JdbcPatientRepository{
+public class JdbcPatientRepository {
     public JdbcPatientRepository() {
         getConnection();
     }
+
     public static final String JDBC_DRIVER = "org.postgresql.Driver";
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/patient";
     private static final String DB_USER = "postgres";
@@ -29,7 +30,7 @@ public class JdbcPatientRepository{
 
         try (Connection connection = getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patient")) {
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patients")) {
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("patient_id");
@@ -53,7 +54,7 @@ public class JdbcPatientRepository{
 
     public void addPatient(Patient patient) {
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.patient(patient_name, patient_email) VALUES (?, ?)")) {
+             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.patients(patient_name, patient_email) VALUES (?, ?)")) {
             statement.setString(1, patient.getName());
             statement.setString(2, patient.getEmail());
             statement.executeUpdate();
@@ -63,16 +64,29 @@ public class JdbcPatientRepository{
         }
     }
 
-    public void deletePatient(int id){
+    public void deletePatient(int id) {
 
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("DELETE FROM public.patient WHERE patient_id = ?")){
-            statement.setInt(1,id);
+             PreparedStatement statement = connection.prepareStatement("DELETE FROM public.patients WHERE patient_id = ?")) {
+            statement.setInt(1, id);
             statement.executeUpdate();
 
         } catch (SQLException e) {
-    e.printStackTrace();
+            e.printStackTrace();
         }
     }
+
+//    public void updatePatient(int id) {
+//        id=1;
+//        try (Connection connection = getConnection();
+//             PreparedStatement statement = connection.prepareStatement("ALTER SEQUENCE patients_id_seq RESTART WITH ?")) {
+//            statement.setInt(1, id);
+//            statement.executeUpdate();
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
 }
