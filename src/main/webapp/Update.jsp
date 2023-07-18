@@ -10,7 +10,7 @@
   JdbcPatientRepository repository = new JdbcPatientRepository();
   //JpaPatientRepository repository = new JpaPatientRepository();
 
-  repository.deletePatient(id);
+  repository.UpdatePatient(id);
 
 %>
 

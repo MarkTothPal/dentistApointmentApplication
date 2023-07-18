@@ -14,6 +14,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Delete</th>
+            <th>Update</th>
         </tr>
         <%
             JdbcPatientRepository repository = new JdbcPatientRepository();
@@ -26,6 +27,7 @@
                 <td><%= patients.getName() %></td>
                 <td><%= patients.getEmail() %></td>
                 <td><a href="deletePatient.jsp?id=<%=patients.getId() %>"><button type="button"  class="delete">Delete</button></a></td>
+                <td><a href="updatePatient.jsp?id=<%=patients.getId() %>"><button type="button"  class="update">Update</button></a></td>
             </tr>
 
         <% } %>
