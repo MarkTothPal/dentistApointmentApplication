@@ -3,14 +3,16 @@
 
 <%
 
-   String idString=request.getParameter("id");
-   int id = Integer.parseInt(idString);
+  String name = request.getParameter("name");
+    String email = request.getParameter("email");
+
+    Patient patient = new Patient(name, email);
 
 
   JdbcPatientRepository repository = new JdbcPatientRepository();
   //JpaPatientRepository repository = new JpaPatientRepository();
 
-  repository.UpdatePatient(id);
+  repository.updatePatient(patient);
 
 %>
 

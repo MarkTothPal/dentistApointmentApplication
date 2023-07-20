@@ -75,18 +75,37 @@ public class JdbcPatientRepository {
             e.printStackTrace();
         }
     }
+    public void selectPatient(int id) {
+        try (Connection connection = getConnection();
+             Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patients WHERE patients_id = ?")) {
+            statement.setInt(1, id);
+            statement.executeUpdate();
+            int id = resultSet.getInt("patient_id");
+            String name = resultSet.getString("patient_name");
+            String email = resultSet.getString("patient_email");
 
-//    public void updatePatient(int id) {
-//        id=1;
-//        try (Connection connection = getConnection();
-//             PreparedStatement statement = connection.prepareStatement("ALTER SEQUENCE patients_id_seq RESTART WITH ?")) {
-//            statement.setInt(1, id);
-//            statement.executeUpdate();
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
+            Patient patient = new Patient();
+            patient.setId(id);
+            patient.setName(name);
+            patient.setEmail(email);
 
-}
+            patientList.add(patient);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+        public void updatePatient (Patient patient){
+            try (Connection connection = getConnection();
+                 PreparedStatement statement = connection.prepareStatement("UPDATE public.patients SET patient_name = ? , patient_email = ? WHERE patient_id = ?")) {
+                statement.setString(1, patient.getName());
+                statement.setString(2, patient.getEmail());
+                statement.setInt(3, patient.getId());
+                statement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
