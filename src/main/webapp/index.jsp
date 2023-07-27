@@ -26,7 +26,7 @@
                 <td><%= patients.getName() %></td>
                 <td><%= patients.getEmail() %></td>
                 <td><a href="deletePatient.jsp?id=<%=patients.getId() %>"><button type="button"  class="delete">Delete</button></a></td>
-                <td><a href="updatePage.jsp?id=<%=patients.getId() %>"><button type="button"  class="update">Update</button></a></td>
+                <td><a href="updatePage.jsp?id=<%=patients.getId()%>"><button type="button"  class="update">Update</button></a></td>
             </tr>
 
         <% } %>

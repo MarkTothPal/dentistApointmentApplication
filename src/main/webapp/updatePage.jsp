@@ -8,20 +8,25 @@
 <body>
 <%
     String idString = request.getParameter("id");
+    int id = Integer.parseInt(idString);
+    String nameString = request.getParameter("name");
+    String emailString = request.getParameter("email");
     %>
 
      <table border="1" class="table table-striped table-hover w-50 p-3">
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
                 </tr>
             <%
                 JdbcPatientRepository repository = new JdbcPatientRepository();
                 //JpaPatientRepository repository = new JpaPatientRepository();
-                List<Patient> patient = repository.selectPatient();
+                List<Patient> patient = repository.selectPatient(id);
                 for (Patient patients : patient) {
             %>
                 <tr>
+                    <td><%= patients.getId()%></td>
                     <td><%= patients.getName() %></td>
                     <td><%= patients.getEmail() %></td>
 

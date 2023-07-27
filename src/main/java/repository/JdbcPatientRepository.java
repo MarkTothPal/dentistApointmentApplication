@@ -12,7 +12,7 @@ public class JdbcPatientRepository {
     }
 
     public static final String JDBC_DRIVER = "org.postgresql.Driver";
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/patient";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "root";
 
@@ -75,25 +75,29 @@ public class JdbcPatientRepository {
             e.printStackTrace();
         }
     }
-    public void selectPatient(int id) {
+    public List<Patient> selectPatient(int id) {
+        List<Patient> patientList2 = new ArrayList<>();
         try (Connection connection = getConnection();
-             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patients WHERE patients_id = ?")) {
+             PreparedStatement statement = connection.prepareStatement("SELECT * FROM public.patients WHERE patient_id = ?")) {
             statement.setInt(1, id);
-            statement.executeUpdate();
-            int id = resultSet.getInt("patient_id");
-            String name = resultSet.getString("patient_name");
-            String email = resultSet.getString("patient_email");
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
 
-            Patient patient = new Patient();
-            patient.setId(id);
-            patient.setName(name);
-            patient.setEmail(email);
+                int resultId = resultSet.getInt("patient_id");
+                String name = resultSet.getString("patient_name");
+                String email = resultSet.getString("patient_email");
 
-            patientList.add(patient);
+                Patient patient = new Patient();
+                patient.setId(resultId);
+                patient.setName(name);
+                patient.setEmail(email);
+
+                patientList2.add(patient);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return patientList2;
     }
 
         public void updatePatient (Patient patient){
