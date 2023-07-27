@@ -41,8 +41,20 @@
 
                 </tr>
 
-            <% } %>
+
         </table>
+        <form method="post" action="updatePatient.jsp">
+        <input type="hidden" name="id" value="<%=patients.getId() %>">
+        <br>
+        Name:<br>
+        <input type="text" name="name" value="<%=patients.getName() %>">
+        <br>
+        Email Id:<br>
+        <input type="email" name="email" value="<%=patients.getEmail()%>">
+        <br><br>
+        <input type="submit" value="submit">
+        </form>
+        <% } %>
         <form action="updatePatient.jsp">
                 <div class="form-outline mb-4">
                     <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>

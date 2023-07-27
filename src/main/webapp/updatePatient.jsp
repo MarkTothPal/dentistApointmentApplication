@@ -2,11 +2,12 @@
 <%@ page import="java.lang.*" %>
 
 <%
-
+    String idString = request.getParameter("id");
+    int id = Integer.parseInt(idString);
   String name = request.getParameter("name");
-    String email = request.getParameter("email");
+  String email = request.getParameter("email");
 
-    Patient patient = new Patient(name, email);
+    Patient patient = new Patient(id, name, email);
 
 
   JdbcPatientRepository repository = new JdbcPatientRepository();
