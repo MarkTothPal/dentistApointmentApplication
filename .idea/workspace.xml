@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_18_2023_7_33_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_18_2023_7_33_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/JdbcPatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/JdbcPatientRepository.java" afterDir="false" />
+    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Update page commit">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/updatePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updatePage.jsp" afterDir="false" />
     </list>
@@ -142,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689698693102</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update page commit">
+      <option name="closed" value="true" />
+      <created>1690476831491</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690476831491</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,7 +164,8 @@
     <MESSAGE value="adasd" />
     <MESSAGE value="Am mai sters din aplicatie cod care era in plus" />
     <MESSAGE value="Commit pt ca mi-am modificat numele tabelului sa avem toti 3 patients" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit pt ca mi-am modificat numele tabelului sa avem toti 3 patients" />
+    <MESSAGE value="Update page commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update page commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
