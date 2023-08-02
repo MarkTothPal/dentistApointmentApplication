@@ -1,0 +1,181 @@
+Index: src/main/java/repository/JdbcPatientRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package repository;\r\n\r\nimport model.Patient;\r\n\r\nimport java.sql.*;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class JdbcPatientRepository{\r\n    public JdbcPatientRepository() {\r\n        getConnection();\r\n    }\r\n    public static final String JDBC_DRIVER = \"org.postgresql.Driver\";\r\n    private static final String DB_URL = \"jdbc:postgresql://localhost:5432/patient\";\r\n    private static final String DB_USER = \"postgres\";\r\n    private static final String DB_PASSWORD = \"root\";\r\n\r\n    public Connection getConnection() {\r\n        try {\r\n            Class.forName(JDBC_DRIVER);\r\n            return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);\r\n        } catch (Exception e) {\r\n            throw new RuntimeException(\"Can't connect to the db\" + e.getMessage());\r\n        }\r\n    }\r\n\r\n    public List<Patient> getAllPatients() {\r\n        List<Patient> patientList = new ArrayList<>();\r\n\r\n        try (Connection connection = getConnection();\r\n             Statement statement = connection.createStatement();\r\n             ResultSet resultSet = statement.executeQuery(\"SELECT * FROM public.patient\")) {\r\n\r\n            while (resultSet.next()) {\r\n                int id = resultSet.getInt(\"patient_id\");\r\n                String name = resultSet.getString(\"patient_name\");\r\n                String email = resultSet.getString(\"patient_email\");\r\n\r\n                Patient patient = new Patient();\r\n                patient.setId(id);\r\n                patient.setName(name);\r\n                patient.setEmail(email);\r\n\r\n                patientList.add(patient);\r\n            }\r\n\r\n        } catch (SQLException e) {\r\n            e.printStackTrace();\r\n        }\r\n\r\n        return patientList;\r\n    }\r\n\r\n    public void addPatient(Patient patient) {\r\n        try (Connection connection = getConnection();\r\n             PreparedStatement statement = connection.prepareStatement(\"INSERT INTO public.patient(patient_name, patient_email) VALUES (?, ?)\")) {\r\n            statement.setString(1, patient.getName());\r\n            statement.setString(2, patient.getEmail());\r\n            statement.executeUpdate();\r\n\r\n        } catch (SQLException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    public void deletePatient(int id){\r\n\r\n        try (Connection connection = getConnection();\r\n             PreparedStatement statement = connection.prepareStatement(\"DELETE FROM public.patient WHERE patient_id = ?\")){\r\n            statement.setInt(1,id);\r\n            statement.executeUpdate();\r\n\r\n        } catch (SQLException e) {\r\n    e.printStackTrace();\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/repository/JdbcPatientRepository.java b/src/main/java/repository/JdbcPatientRepository.java
+--- a/src/main/java/repository/JdbcPatientRepository.java	
++++ b/src/main/java/repository/JdbcPatientRepository.java	
+@@ -2,6 +2,7 @@
+ 
+ import model.Patient;
+ 
++import javax.swing.*;
+ import java.sql.*;
+ import java.util.ArrayList;
+ import java.util.List;
+@@ -29,7 +30,7 @@
+ 
+         try (Connection connection = getConnection();
+              Statement statement = connection.createStatement();
+-             ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patient")) {
++             ResultSet resultSet = statement.executeQuery("SELECT * FROM public.patients")) {
+ 
+             while (resultSet.next()) {
+                 int id = resultSet.getInt("patient_id");
+@@ -53,7 +54,7 @@
+ 
+     public void addPatient(Patient patient) {
+         try (Connection connection = getConnection();
+-             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.patient(patient_name, patient_email) VALUES (?, ?)")) {
++             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.patients(patient_name, patient_email) VALUES (?, ?)")) {
+             statement.setString(1, patient.getName());
+             statement.setString(2, patient.getEmail());
+             statement.executeUpdate();
+@@ -66,7 +67,7 @@
+     public void deletePatient(int id){
+ 
+         try (Connection connection = getConnection();
+-             PreparedStatement statement = connection.prepareStatement("DELETE FROM public.patient WHERE patient_id = ?")){
++             PreparedStatement statement = connection.prepareStatement("DELETE FROM public.patients WHERE patient_id = ?")){
+             statement.setInt(1,id);
+             statement.executeUpdate();
+ 
+@@ -76,3 +77,4 @@
+     }
+ 
+ }
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"12abdf85-3e6d-455f-9084-8f5fcbd1060c\" name=\"Changes\" comment=\"Am mai sters din aplicatie cod care era in plus\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/repository/JdbcPatientRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/repository/JdbcPatientRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/deletePatient.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/deletePatient.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/index.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/index.jsp\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Rl0zT4sOWK73aqDGDsQMmYyfi1\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/Dev/dentistApointmentApplication/src/main/webapp&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\Dev\\dentistApp\" />\r\n      <recent name=\"D:\\Dev\\dentistApointmentApplication\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Mark\\IdeaProjects\\dentistApointmentApplication\\src\\main\\webapp\\\" />\r\n      <recent name=\"C:\\Users\\Mark\\IdeaProjects\\dentistApointmentApplication\\src\\main\\resources\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Unnamed\" type=\"com.poratu.idea.plugins.tomcat\" nameIsGenerated=\"true\">\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Localhost Log\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Access Log\" />\r\n      <predefined_log_file id=\"Tomcat Catalina Log\" />\r\n      <predefined_log_file id=\"Tomcat Manager Log\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager Log\" />\r\n      <option name=\"contextPath\" value=\"/dentistApointmentApplication\" />\r\n      <option name=\"docBase\" value=\"$PROJECT_DIR$/src/main/webapp\" />\r\n      <option name=\"envOptions\">\r\n        <map />\r\n      </option>\r\n      <option name=\"extraClassPath\" value=\"\" />\r\n      <option name=\"tomcatInfo\">\r\n        <TomcatInfo>\r\n          <option name=\"name\" value=\"Apache Tomcat/10.1.9\" />\r\n          <option name=\"path\" value=\"C:/Program Files (x86)/apache-tomcat-10.1.9\" />\r\n          <option name=\"version\" value=\"10.1.9.0\" />\r\n        </TomcatInfo>\r\n      </option>\r\n      <option name=\"vmOptions\" value=\"\" />\r\n      <module name=\"dentistApointmentApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"12abdf85-3e6d-455f-9084-8f5fcbd1060c\" name=\"Changes\" comment=\"\" />\r\n      <created>1687809631715</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1687809631715</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"adasd\">\r\n      <created>1688402107533</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688402107533</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"adasd\">\r\n      <created>1688403755789</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688403755789</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"adasd\">\r\n      <created>1688577754294</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688577754294</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"adasd\">\r\n      <created>1688660969753</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1688660969753</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"adasd\" />\r\n    <MESSAGE value=\"Am mai sters din aplicatie cod care era in plus\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Am mai sters din aplicatie cod care era in plus\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,11 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Am mai sters din aplicatie cod care era in plus">
++    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/repository/JdbcPatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/JdbcPatientRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/deletePatient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deletePatient.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/webapp/Update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Update.jsp" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -24,6 +23,7 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="LogFilters">
+     <option name="FILTER_ERRORS" value="false" />
+@@ -73,15 +73,12 @@
+       <predefined_log_file id="Tomcat Host Manager Log" />
+       <option name="contextPath" value="/dentistApointmentApplication" />
+       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+-      <option name="envOptions">
+-        <map />
+-      </option>
+       <option name="extraClassPath" value="" />
+       <option name="tomcatInfo">
+         <TomcatInfo>
+-          <option name="name" value="Apache Tomcat/10.1.9" />
+-          <option name="path" value="C:/Program Files (x86)/apache-tomcat-10.1.9" />
+-          <option name="version" value="10.1.9.0" />
++          <option name="name" value="Apache Tomcat/10.1.10" />
++          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-10.1.10-windows-x64/apache-tomcat-10.1.10" />
++          <option name="version" value="10.1.10.0" />
+         </TomcatInfo>
+       </option>
+       <option name="vmOptions" value="" />
+@@ -128,13 +125,50 @@
+       <option name="project" value="LOCAL" />
+       <updated>1688660969753</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="adasd">
++      <option name="closed" value="true" />
++      <created>1689671979475</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1689671979475</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Update button">
++      <option name="closed" value="true" />
++      <created>1689672043051</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1689672043051</updated>
++    </task>
++    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
++      <option name="closed" value="true" />
++      <created>1689672158344</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1689672158344</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="adasd" />
+     <MESSAGE value="Am mai sters din aplicatie cod care era in plus" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Am mai sters din aplicatie cod care era in plus" />
++    <MESSAGE value="Update button" />
++    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
++    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: src/main/webapp/Update.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"model.Patient, repository.JdbcPatientRepository\" %>\r\n<%@ page import=\"java.lang.*\" %>\r\n\r\n<%\r\n\r\n   String idString=request.getParameter(\"id\");\r\n   int id = Integer.parseInt(idString);\r\n\r\n\r\n  JdbcPatientRepository repository = new JdbcPatientRepository();\r\n  //JpaPatientRepository repository = new JpaPatientRepository();\r\n\r\n  repository.UpdatePatient(id);\r\n\r\n%>\r\n\r\n  <meta http-equiv=\"Refresh\" content=\"0; url='/dentistApointmentApplication\" />
+===================================================================
+diff --git a/src/main/webapp/Update.jsp b/src/main/webapp/Update.jsp
+--- a/src/main/webapp/Update.jsp	
++++ b/src/main/webapp/Update.jsp	
+@@ -10,6 +10,18 @@
+   JdbcPatientRepository repository = new JdbcPatientRepository();
+   //JpaPatientRepository repository = new JpaPatientRepository();
+ 
++  <%
++
++    String email = request.getParameter("email");
++    Patient patient = update new Patient( update email);
++
++    JdbcPatientRepository repository = new JdbcPatientRepository();
++    //JpaPatientRepository repository = new JpaPatientRepository();
++
++    repository.addPatient(patient);
++
++  %>
++
+   repository.UpdatePatient(id);
+ 
+ %>
