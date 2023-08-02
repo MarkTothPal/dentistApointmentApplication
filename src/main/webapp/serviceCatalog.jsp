@@ -10,7 +10,6 @@
   </head>
 <body>
 
- <a href= "patientCatalog.jsp"> Patient Catalog</a>
-
+ <a href= "serviceCatalog.jsp"> Service Catalog</a>
 </body>
 </html>
