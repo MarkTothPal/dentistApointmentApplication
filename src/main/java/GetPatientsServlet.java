@@ -3,7 +3,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Patient;
-import repository.JdbcPatientRepository;
+import repository.PatientRepository;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public class GetPatientsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        JdbcPatientRepository repository = new JdbcPatientRepository();
+        PatientRepository repository = new PatientRepository();
         List<Patient> patients = repository.getAllPatients();
 
         resp.setContentType("text/html");

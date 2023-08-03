@@ -14,7 +14,7 @@
   </script>
 </head>
 <body>
-<a href= "patientCatalog.jsp"> Patient Catalog</a>
+<a href= "patientJsps/patientCatalog.jsp"> Patient Catalog</a>
 <p>Date: <input type="text" id="datepicker"></p>
 </body>
 </html>

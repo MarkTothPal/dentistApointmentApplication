@@ -10,6 +10,29 @@
   </head>
 <body>
 
- <a href= "serviceCatalog.jsp"> Service Catalog</a>
+ <table border="1" class="table table-striped table-hover w-50 p-3">
+         <tr>
+             <th>ID</th>
+             <th>Name</th>
+             <th>Price</th>
+             <th>Delete</th>
+             <th>Update</th>
+         </tr>
+         <%
+             ServiceRepository repository = new ServiceRepository();
+
+             List<Service> service = repository.getAllServices();
+             for (Service services : service) {
+         %>
+             <tr>
+                 <td><%= services.getId() %></td>
+                 <td><%= service.getName() %></td>
+                 <td><%= services.getPrice() %></td>
+                 <td><a href="deletePatient.jsp?id=<%=patients.getId() %>"><button type="button"  class="delete">Delete</button></a></td>
+                 <td><a href="updatePage.jsp?id=<%=patients.getId()%>"><button type="button"  class="update">Update</button></a></td>
+             </tr>
+
+         <% } %>
+     </table>
 </body>
 </html>

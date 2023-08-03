@@ -1,4 +1,4 @@
-<%@ page import="model.Patient, repository.JdbcPatientRepository" %>
+<%@ page import="model.Patient, repository.PatientRepository" %>
 <%@ page import="java.lang.*" %>
 
 <%
@@ -10,11 +10,11 @@
     Patient patient = new Patient(id, name, email);
 
 
-  JdbcPatientRepository repository = new JdbcPatientRepository();
-  //JpaPatientRepository repository = new JpaPatientRepository();
+  PatientRepository repository = new PatientRepository();
+
 
   repository.updatePatient(patient);
 
 %>
 
-  <meta http-equiv="Refresh" content="0; url='/dentistApointmentApplication" />
+  <meta http-equiv="Refresh" content="0; url='patientJsps/patientCatalog.jsp" />

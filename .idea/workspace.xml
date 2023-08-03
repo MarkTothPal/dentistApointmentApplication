@@ -4,16 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Update page + method working">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/CreatePatientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/PatientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/ServiceDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/patientCatalog.jsp" afterDir="false" />
+    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Appointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/JdbcRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/deleteService.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/addPatient.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/deletePatient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GetPatientsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GetPatientsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/JdbcPatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PatientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/JpaPatientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addPatient.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/deletePatient.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/updatePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updatePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/patientCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceCatalog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/updatePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/updatePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/updatePatient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/updatePatient.jsp" afterDir="false" />
+    </list>
+    <list id="d2ceaf39-c276-4164-b821-1b1d667fe17f" name="Changes by nseica" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +58,14 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="7" changelist="d2ceaf39-c276-4164-b821-1b1d667fe17f" />
+        <range start1="16" end1="17" start2="21" end2="22" changelist="12abdf85-3e6d-455f-9084-8f5fcbd1060c" />
+      </ranges>
+    </file>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -53,6 +75,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Rl0zT4sOWK73aqDGDsQMmYyfi1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,6 +104,7 @@
       <recent name="D:\Dev\dentistApointmentApplication" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mark Toth-Pal\IdeaProjects\dentistApointmentApplication\src\main\webapp\patientJsps" />
       <recent name="C:\Users\Mark\IdeaProjects\dentistApointmentApplication\src\main\webapp\" />
       <recent name="C:\Users\Mark\IdeaProjects\dentistApointmentApplication\src\main\resources" />
     </key>
@@ -182,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690480164327</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1691072965217</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691072965217</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,7 +236,8 @@
     <MESSAGE value="Commit pt ca mi-am modificat numele tabelului sa avem toti 3 patients" />
     <MESSAGE value="Update page commit" />
     <MESSAGE value="Update page + method working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update page + method working" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

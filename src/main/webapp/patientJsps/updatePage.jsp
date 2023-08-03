@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.List" %>
-<%@ page import="repository.JdbcPatientRepository" %>
-<%@ page import="repository.JpaPatientRepository" %>
+<%@ page import="repository.PatientRepository" %>
 <%@ page import="model.Patient" %>
 <%@ page import="java.lang.*" %>
 <html>
@@ -29,8 +28,8 @@
                 <th>Email</th>
                 </tr>
             <%
-                JdbcPatientRepository repository = new JdbcPatientRepository();
-                //JpaPatientRepository repository = new JpaPatientRepository();
+                PatientRepository repository = new PatientRepository();
+
                 List<Patient> patient = repository.selectPatient(id);
                 for (Patient patients : patient) {
             %>
