@@ -17,4 +17,4 @@
 
 %>
 
-  <meta http-equiv="Refresh" content="0; url='patientJsps/patientCatalog.jsp" />
+  <meta http-equiv="Refresh" content="0; url='patientCatalog.jsp" />
