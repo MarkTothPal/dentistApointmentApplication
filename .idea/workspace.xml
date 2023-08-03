@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Update page commit">
+    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Update page + method working">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/CreatePatientDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/PatientDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/ServiceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/patientCatalog.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/updatePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updatePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/updatePatient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updatePatient.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +30,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="abcde6d9-cc07-4c48-98be-af4dd31c30a1" />
+        <option name="url" value="https://github.com/MarkTothPal/dentistApointmentApplication" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -155,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690477067637</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update page + method working">
+      <option name="closed" value="true" />
+      <created>1690480164327</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690480164327</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +201,8 @@
     <MESSAGE value="Am mai sters din aplicatie cod care era in plus" />
     <MESSAGE value="Commit pt ca mi-am modificat numele tabelului sa avem toti 3 patients" />
     <MESSAGE value="Update page commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update page commit" />
+    <MESSAGE value="Update page + method working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update page + method working" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

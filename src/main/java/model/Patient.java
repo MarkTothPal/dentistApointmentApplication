@@ -13,22 +13,11 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 @ToString
-@Entity
-@Table(name = "patients")
 public class Patient {
 
     private int id;
     private String name;
     private String email;
-
-//        @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
-//        @JoinTable(
-//                name = "patients_services",
-//                joinColumns = { @JoinColumn(name = "patient_id") },
-//                inverseJoinColumns = { @JoinColumn(name = "service_id") }
-//        )
-//        @Fetch(FetchMode.JOIN)
-//        private List<Service> services;
 
 
     public Patient(int id, String name, String email) {

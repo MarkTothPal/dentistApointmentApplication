@@ -47,10 +47,10 @@
         <input type="hidden" name="id" value="<%=patients.getId() %>">
         <br>
         Name:<br>
-        <input type="text" name="name" value="<%=patients.getName() %>">
+        <input type="text" name="name" value="">
         <br>
         Email Id:<br>
-        <input type="email" name="email" value="<%=patients.getEmail()%>">
+        <input type="email" name="email" value="">
         <br><br>
         <input type="submit" value="submit">
         </form>
