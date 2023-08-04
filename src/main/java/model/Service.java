@@ -13,9 +13,9 @@ public class Service {
 
     private int id;
     private String name;
-    private double price;
+    private int price;
 
-    public Service(String name, double price) {
+    public Service(String name, int price) {
         this.name = name;
         this.price = price;
     }
@@ -27,7 +27,7 @@ public class Service {
         this.id = id;
     }
 
-    public Service(int id, String name, double price) {
+    public Service(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;

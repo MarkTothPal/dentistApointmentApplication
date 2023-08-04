@@ -22,7 +22,7 @@ public class ServiceRepository extends JdbcRepository {
             while (resultSet.next()) {
                 int id = resultSet.getInt("service_id");
                 String name = resultSet.getString("service_name");
-                double price = resultSet.getDouble("service_price");
+                int price = resultSet.getInt("service_price");
 
                 Service service = new Service();
                 service.setId(id);
@@ -41,9 +41,9 @@ public class ServiceRepository extends JdbcRepository {
 
     public void addService(Service service) {
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.services(service_name, service_email) VALUES (?, ?)")) {
+             PreparedStatement statement = connection.prepareStatement("INSERT INTO public.services(service_name, service_price) VALUES (?, ?)")) {
             statement.setString(1, service.getName());
-            statement.setDouble(2, service.getPrice());
+            statement.setInt(2, service.getPrice());
             statement.executeUpdate();
 
         } catch (SQLException e) {
@@ -72,7 +72,7 @@ public class ServiceRepository extends JdbcRepository {
 
                 int resultId = resultSet.getInt("service_id");
                 String name = resultSet.getString("service_name");
-                double price = resultSet.getDouble("service_price");
+                int price = resultSet.getInt("service_price");
 
                 Service service = new Service();
                 service.setId(resultId);
@@ -87,12 +87,12 @@ public class ServiceRepository extends JdbcRepository {
         return serviceList2;
     }
 
-    public void updatePatient (Patient patient){
+    public void updateService (Service service){
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement("UPDATE public.services SET service_name = ? , service_price = ? WHERE service_id = ?")) {
-            statement.setString(1, patient.getName());
-            statement.setString(2, patient.getEmail());
-            statement.setInt(3, patient.getId());
+            statement.setString(1, service.getName());
+            statement.setInt(2, service.getPrice());
+            statement.setInt(3, service.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

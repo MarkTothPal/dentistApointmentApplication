@@ -8,6 +8,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  background-color: white;
+}
 </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +30,10 @@ body {
   </script>
 </head>
 <body>
-<a href= "patientJsps/patientCatalog.jsp"> Patient Catalog</a>
-<p>Date: <input type="text" id="datepicker"></p>
+<div>
+    <a href= "patientJsps/patientCatalog.jsp"> Patient Catalog</a>
+    <a href= "serviceJsps/serviceCatalog.jsp"> Patient Catalog</a>
+    <p>Date: <input type="text" id="datepicker"></p>
+</div>
 </body>
 </html>

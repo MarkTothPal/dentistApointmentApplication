@@ -54,17 +54,6 @@
         <input type="submit" value="submit">
         </form>
         <% } %>
-        <form action="updatePatient.jsp">
-                <div class="form-outline mb-4">
-                    <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>
-                </div>
-                <div class="form-outline mb-4">
-                    <input type="text" name="email"  value="Email..." onclick="this.value=''"/><br/>
-                </div>
-
-            <br/>
-
-            <input type="submit" value="Update Patient" class="btn btn-primary btn-block"/>
 
 </body>
 </html>

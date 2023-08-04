@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="repository.PatientRepository" %>
-
 <%@ page import="model.Patient" %>
 <html>
 <head>
@@ -35,7 +34,7 @@
                 <td><%= patients.getName() %></td>
                 <td><%= patients.getEmail() %></td>
                 <td><a href="deletePatient.jsp?id=<%=patients.getId() %>"><button type="button"  class="delete">Delete</button></a></td>
-                <td><a href="updatePage.jsp?id=<%=patients.getId()%>"><button type="button"  class="update">Update</button></a></td>
+                <td><a href="updatePagePatient.jsp?id=<%=patients.getId()%>"><button type="button"  class="update">Update</button></a></td>
             </tr>
 
         <% } %>
