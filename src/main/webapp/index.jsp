@@ -32,7 +32,8 @@ div {
 <body>
 <div>
     <a href= "patientJsps/patientCatalog.jsp"> Patient Catalog</a>
-    <a href= "serviceJsps/serviceCatalog.jsp"> Patient Catalog</a>
+    <a href= "serviceJsps/serviceCatalog.jsp"> Service Catalog</a>
+    <a href= "appointmentJsps/appointmentCatalog.jsp"> Appointment Catalog</a>
     <p>Date: <input type="text" id="datepicker"></p>
 </div>
 </body>

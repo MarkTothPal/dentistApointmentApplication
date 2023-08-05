@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="repository.ServiceRepository" %>
-<%@ page import="model.Patient" %>
+<%@ page import="model.Service" %>
 <%@ page import="java.lang.*" %>
 <html>
 <head>
@@ -17,8 +17,7 @@
 <%
     String idString = request.getParameter("id");
     int id = Integer.parseInt(idString);
-    String nameString = request.getParameter("name");
-    String emailString = request.getParameter("email");
+
     %>
 
      <table border="1" class="table table-striped table-hover w-50 p-3">
@@ -28,28 +27,28 @@
                 <th>Email</th>
                 </tr>
             <%
-                PatientRepository repository = new PatientRepository();
+                ServiceRepository repository = new ServiceRepository();
 
-                List<Patient> patient = repository.selectPatient(id);
-                for (Patient patients : patient) {
+                List<Service> service = repository.selectService(id);
+                for (Service services : service) {
             %>
                 <tr>
-                    <td><%= patients.getId()%></td>
-                    <td><%= patients.getName() %></td>
-                    <td><%= patients.getEmail() %></td>
+                    <td><%= services.getId()%></td>
+                    <td><%= services.getName() %></td>
+                    <td><%= services.getPrice() %></td>
 
                 </tr>
 
 
         </table>
-        <form method="post" action="updatePatient.jsp">
-        <input type="hidden" name="id" value="<%=patients.getId() %>">
+        <form method="post" action="updateService.jsp">
+        <input type="hidden" name="id" value="<%=services.getId() %>">
         <br>
         Name:<br>
         <input type="text" name="name" value="">
         <br>
         Email Id:<br>
-        <input type="email" name="email" value="">
+        <input type="number" name="price" value="">
         <br><br>
         <input type="submit" value="submit">
         </form>

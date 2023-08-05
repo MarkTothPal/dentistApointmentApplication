@@ -62,7 +62,7 @@ public class ServiceRepository extends JdbcRepository {
             e.printStackTrace();
         }
     }
-    public List<Service> selectPatient(int id) {
+    public List<Service> selectService(int id) {
         List<Service> serviceList2 = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement("SELECT * FROM public.services WHERE service_id = ?")) {

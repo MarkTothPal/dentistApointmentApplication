@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.List" %>
-<%@ page import="repository.PatientRepository" %>
-<%@ page import="model.Patient" %>
+<%@ page import="repository.AppointmentRepository" %>
+<%@ page import="model.Appointment" %>
 <html>
 <head>
     <!-- This will make the table look nicer -->
@@ -19,24 +19,25 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Email</th>
+            <th>Service</th>
+            <th>Date</th>
             <th>Delete</th>
             <th>Update</th>
-            <th>Appointment</th>
         </tr>
         <%
-            PatientRepository repository = new PatientRepository();
+            AppointmentRepository repository = new AppointmentRepository();
 
-            List<Patient> patient = repository.getAllPatients();
-            for (Patient patients : patient) {
+            List<Appointment> appointment = repository.getAllAppointments();
+            for (Appointment appointments : appointment) {
         %>
             <tr>
-                <td><%= patients.getId() %></td>
-                <td><%= patients.getName() %></td>
-                <td><%= patients.getEmail() %></td>
-                <td><a href="deletePatient.jsp?id=<%=patients.getId() %>"><button type="button"  class="btn btn-primary btn-block">Delete</button></a></td>
-                <td><a href="updatePagePatient.jsp?id=<%=patients.getId()%>"><button type="button"  class="btn btn-primary btn-block">Update</button></a></td>
-                <td><a href="../appointmentJsps/addAppointmentPage.jsp?id=<%=patients.getId()%>&name=<%=patients.getName()%>"><button type="button"  class="btn btn-primary btn-block">Appointment</button></a></td>
+                <td><%= appointments.getId() %></td>
+                <td><%= appointments.getPatientName() %></td>
+                <td><%= appointments.getServiceName() %></td>
+                <td><%= appointments.getDate()%></td>
+                <td><a href="deletePatient.jsp?id=<%=appointments.getId() %>"><button type="button"  class="btn btn-primary btn-block">Delete</button></a></td>
+                <td><a href="updatePagePatient.jsp?id=<%=appointments.getId()%>"><button type="button"  class="btn btn-primary btn-block">Update</button></a></td>
+
             </tr>
 
         <% } %>

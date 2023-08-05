@@ -32,8 +32,8 @@
                  <td><%= services.getId() %></td>
                  <td><%= services.getName() %></td>
                  <td><%= services.getPrice() %></td>
-                 <td><a href="deleteService.jsp?id=<%=services.getId() %>"><button type="button"  class="delete">Delete</button></a></td>
-                 <td><a href="updatePageService.jsp?id=<%=services.getId()%>"><button type="button"  class="update">Update</button></a></td>
+                 <td><a href="deleteService.jsp?id=<%=services.getId() %>"><button type="button"  class="btn btn-primary btn-block">Delete</button></a></td>
+                 <td><a href="updatePageService.jsp?id=<%=services.getId()%>"><button type="button"  class="btn btn-primary btn-block">Update</button></a></td>
              </tr>
 
          <% } %>
@@ -43,7 +43,7 @@
                  <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>
              </div>
              <div class="form-outline mb-4">
-                 <input type="text" name="price"  value="Price..." onclick="this.value=''"/><br/>
+                 <input type="number" name="price"  value="Price..." onclick="this.value=''"/><br/>
              </div>
 
          <br/>
