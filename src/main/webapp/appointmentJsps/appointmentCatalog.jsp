@@ -17,7 +17,6 @@
 <h2>Patient List from the index.jsp file</h2>
     <table border="1" class="table table-striped table-hover w-50 p-3">
         <tr>
-            <th>ID</th>
             <th>Name</th>
             <th>Service</th>
             <th>Date</th>
@@ -31,11 +30,10 @@
             for (Appointment appointments : appointment) {
         %>
             <tr>
-                <td><%= appointments.getId() %></td>
                 <td><%= appointments.getPatientName() %></td>
                 <td><%= appointments.getServiceName() %></td>
                 <td><%= appointments.getDate()%></td>
-                <td><a href="deletePatient.jsp?id=<%=appointments.getId() %>"><button type="button"  class="btn btn-primary btn-block">Delete</button></a></td>
+                <td><a href="deletePatient.jsp?id=<%=appointments.getId()%>"><button type="button"  class="btn btn-primary btn-block">Delete</button></a></td>
                 <td><a href="updatePagePatient.jsp?id=<%=appointments.getId()%>"><button type="button"  class="btn btn-primary btn-block">Update</button></a></td>
 
             </tr>

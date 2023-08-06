@@ -16,7 +16,7 @@ public class AppointmentRepository extends JdbcRepository {
 
     public List<Appointment> getAllAppointments() {
         List<Appointment> appointmentList = new ArrayList<>();
-        String sql = "SELECT public.appointments.appointment_id, public.patients.patient_name, public.services.service_name, public.appointments.appointment_date From public.appointments INNER JOIN public.patients ON public.appointments.patient_id = public.patients.patient_id INNER JOIN public.services ON public.appointments.service_id = public.services.service_id";
+        String sql = "SELECT public.appointments.appointment_id, public.patients.patient_name, public.services.service_name, public.appointments.appointment_date From public.appointments INNER JOIN public.patients ON public.appointments.patient_id = public.patients.patient_id INNER JOIN public.services ON public.appointments.service_id = public.services.service_id ORDER BY public.appointments.appointment_date";
         try (Connection connection = getConnection();
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(sql)) {
@@ -67,6 +67,13 @@ public class AppointmentRepository extends JdbcRepository {
             e.printStackTrace();
         }
     }
+//    public static List<Appointment> appointmentFilter(){
+//        LocalDate localDate = LocalDate.now();
+//        List<Appointment> appointmentList = new ArrayList<>();
+//        if(localDate.isAfter(date)){
+//
+//        }
+//    }
 }
 
 

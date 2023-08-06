@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Most of the Service pages">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/CreateAppointmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/AppointmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/addAppointmentPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/submitAppointment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/updateService.jsp" afterDir="false" />
+    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Service update correction, creating appointment working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AppointmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" afterDir="false" />
+    </list>
+    <list id="d878ad09-4815-41d8-81c2-5d3124844179" name="Changes by Cosmin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceJsps/updatePageService.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/updatePageService.jsp" afterDir="false" />
     </list>
     <list id="d2ceaf39-c276-4164-b821-1b1d667fe17f" name="Changes by nseica" comment="Changes by nseica" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +51,17 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="23" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
+        <range start1="15" end1="15" start2="31" end2="37" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
+        <range start1="19" end1="20" start2="41" end2="41" changelist="12abdf85-3e6d-455f-9084-8f5fcbd1060c" />
+        <range start1="33" end1="34" start2="54" end2="54" changelist="12abdf85-3e6d-455f-9084-8f5fcbd1060c" />
+        <range start1="37" end1="38" start2="57" end2="58" changelist="12abdf85-3e6d-455f-9084-8f5fcbd1060c" />
+      </ranges>
+    </file>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -74,20 +81,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mark Toth-Pal/IdeaProjects/dentistApointmentApplication/src/main/webapp/serviceJsps",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mark Toth-Pal/IdeaProjects/dentistApointmentApplication/src/main/webapp/serviceJsps&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mark Toth-Pal\IdeaProjects\dentistApointmentApplication\src\main\webapp\serviceJsps" />
@@ -240,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691150526653</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Service update correction, creating appointment working">
+      <option name="closed" value="true" />
+      <created>1691245126673</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1691245126673</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +279,8 @@
     <MESSAGE value="Changes by nseica" />
     <MESSAGE value="Refactoring JDBC, index style" />
     <MESSAGE value="Most of the Service pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Most of the Service pages" />
+    <MESSAGE value="Service update correction, creating appointment working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service update correction, creating appointment working" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

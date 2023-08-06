@@ -1,8 +1,12 @@
 package model;
 
 import lombok.Data;
+import repository.AppointmentRepository;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 
 public class Appointment {
@@ -10,6 +14,8 @@ public class Appointment {
     private String patientName;
     private String serviceName;
     private LocalDate date;
+
+
 
     public Appointment(String patientName, String serviceName, LocalDate date) {
         this.patientName = patientName;
@@ -26,4 +32,6 @@ public class Appointment {
         this.serviceName = serviceName;
         this.date = date;
     }
+
+
 }
