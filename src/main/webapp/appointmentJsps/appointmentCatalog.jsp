@@ -4,7 +4,23 @@
 <%@ page import="model.Appointment" %>
 <html>
 <head>
-    <!-- This will make the table look nicer -->
+<style>
+#menu{
+    float: left;
+    background: darkblue;
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+}
+ul{
+list-style: none;
+}
+ul li a{
+float: left;
+color: white;
+padding: 0px 40px;
+}
+</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Very nice student list</title>
@@ -13,6 +29,12 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
   </head>
 <body>
+<div id="menu">
+    <ul>
+     <li><a href="/dentistApointmentApplication">Back</a></li>
+    </ul>
+
+</div>
 
 <h2>Patient List from the index.jsp file</h2>
     <table border="1" class="table table-striped table-hover w-50 p-3">
