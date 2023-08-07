@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Stilizare">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_08_2023_17_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_08_2023_17_21__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_28_2023_7_07_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_28_2023_7_07_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Last touch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/addAppointmentPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/addAppointmentPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updatePageAppointment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updatePageAppointment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceJsps/updatePageService.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/updatePageService.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" afterDir="false" />
     </list>
     <list id="d878ad09-4815-41d8-81c2-5d3124844179" name="Changes by Cosmin" comment="Changes by Cosmin" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,9 +98,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/dentistApointmentApplication" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -277,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691396340020</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Last touch">
+      <created>1691425568973</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1691425568974</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -304,7 +302,8 @@
     <MESSAGE value="Service update correction, creating appointment working" />
     <MESSAGE value="Stilizare" />
     <MESSAGE value="Changes by Cosmin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Cosmin" />
+    <MESSAGE value="Last touch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last touch" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

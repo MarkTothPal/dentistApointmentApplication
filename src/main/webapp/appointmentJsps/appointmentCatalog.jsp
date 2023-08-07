@@ -36,7 +36,7 @@ padding: 0px 40px;
 
 </div>
 
-<p style="font-size:160%;"><i>This is the service catalog!</i></p>
+<p style="font-size:160%;"><i>This is the appointment catalog!</i></p>
     <table border="1" class="table table-striped table-hover w-50 p-3">
         <tr>
             <th>Name</th>
