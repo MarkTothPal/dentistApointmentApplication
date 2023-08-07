@@ -62,6 +62,7 @@ padding: 0px 40px;
 
         <% } %>
     </table>
+    </div>
 <br/>
 <br/>
 <h2>Add a patient</h2>

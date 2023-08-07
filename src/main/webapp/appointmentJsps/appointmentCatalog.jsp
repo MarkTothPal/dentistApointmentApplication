@@ -49,6 +49,7 @@ padding: 0px 40px;
             AppointmentRepository repository = new AppointmentRepository();
 
             List<Appointment> appointment = repository.getAllAppointments();
+
             for (Appointment appointments : appointment) {
         %>
             <tr>

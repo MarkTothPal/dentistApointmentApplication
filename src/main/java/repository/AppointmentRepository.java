@@ -1,7 +1,6 @@
 package repository;
 
 import model.Appointment;
-import model.Patient;
 import model.dto.CreateAppointmentDto;
 
 import java.sql.*;
@@ -67,13 +66,7 @@ public class AppointmentRepository extends JdbcRepository {
             e.printStackTrace();
         }
     }
-//    public static List<Appointment> appointmentFilter(){
-//        LocalDate localDate = LocalDate.now();
-//        List<Appointment> appointmentList = new ArrayList<>();
-//        if(localDate.isAfter(date)){
-//
-//        }
-//    }
+
 }
 
 
