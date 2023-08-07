@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Stilizare">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/deleteAppointment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updateAppointment.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updatePageAppointment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_08_2023_17_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_08_2023_17_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_28_2023_7_07_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_28_2023_7_07_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AppointmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ServiceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/addAppointmentPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/addAppointmentPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/patientJsps/deletePatient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/deletePatient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updatePageAppointment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updatePageAppointment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceJsps/updatePageService.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/updatePageService.jsp" afterDir="false" />
     </list>
     <list id="d878ad09-4815-41d8-81c2-5d3124844179" name="Changes by Cosmin" comment="Changes by Cosmin" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,12 +104,15 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/dentistApointmentApplication" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/10.1.11" />
-          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/Tomcat 10.1" />
-          <option name="version" value="10.1.11.0" />
+          <option name="name" value="Apache Tomcat/10.1.9" />
+          <option name="path" value="C:/Program Files (x86)/apache-tomcat-10.1.9" />
+          <option name="version" value="10.1.9.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />

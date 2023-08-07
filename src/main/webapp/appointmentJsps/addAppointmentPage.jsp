@@ -8,6 +8,23 @@
 
 <html>
 <head>
+<style>
+#menu{
+    float: left;
+    background: darkblue;
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+}
+ul{
+list-style: none;
+}
+ul li a{
+float: left;
+color: white;
+padding: 0px 40px;
+}
+</style>
     <!-- This will make the table look nicer -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +33,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
 </head>
-<body>
+<body style="background-color:powderblue;">
+<div id="menu">
+    <ul>
+    <li><a href="/dentistApointmentApplication">Back</a></li>
+    </ul>
+
+</div>
 
     <%
     String idString = request.getParameter("id");
@@ -32,7 +55,6 @@
             <select id="service" name="service">
                 <%
                             ServiceRepository repository = new ServiceRepository();
-
                             List<Service> service = repository.getAllServices();
                             for (Service services : service) {
                 %>

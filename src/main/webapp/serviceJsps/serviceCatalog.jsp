@@ -62,9 +62,11 @@ padding: 0px 40px;
          <% } %>
      </table>
      <form action="addService.jsp">
+            Service name: <br>
              <div class="form-outline mb-4">
                  <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>
              </div>
+             Service price: <br>
              <div class="form-outline mb-4">
                  <input type="number" name="price"  value="Price..." onclick="this.value=''"/><br/>
              </div>

@@ -1,6 +1,7 @@
 <html>
 <head>
 <style>
+
 #menu{
     float: left;
     background: darkblue;
@@ -16,6 +17,13 @@ float: left;
 color: white;
 padding: 0px 40px;
 }
+#quote{
+background-color: rgba(255, 0, 0, 0.4);
+font-size: 180%;
+text-align: center;
+font-family: courier;
+}
+
 body {
   background-image: url('Die-Praxis1.jpg');
   height: 100%;
@@ -36,7 +44,10 @@ body {
     <li><a href="patientJsps/patientCatalog.jsp">Patient Catalog</a></li>
     <li><a href="serviceJsps/serviceCatalog.jsp">Service Catalog</a></li>
     <li><a href="appointmentJsps/appointmentCatalog.jsp">Appointment Catalog</a></li>
-
 </div>
+
+<p style=" display: flex; justify-content: center; align-items: center; height: 200px; border: 3px solid red;" id="quote"><i><b> The most beautiful moments in our life are accompanied by a smile. Each of us needs the support of a specialist to preserve the natural beauty of our smile.</b></i></p>
 </body>
 </html>
+
+
