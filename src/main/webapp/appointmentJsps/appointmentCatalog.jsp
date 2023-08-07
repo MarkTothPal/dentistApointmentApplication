@@ -56,28 +56,12 @@ padding: 0px 40px;
                 <td><%= appointments.getPatientName() %></td>
                 <td><%= appointments.getServiceName() %></td>
                 <td><%= appointments.getDate()%></td>
-                <td><a href="deletePatient.jsp?id=<%=appointments.getId()%>"><button type="button"  class="btn btn-primary btn-block">Delete</button></a></td>
-                <td><a href="updatePagePatient.jsp?id=<%=appointments.getId()%>"><button type="button"  class="btn btn-primary btn-block">Update</button></a></td>
+                <td><a href="deleteAppointment.jsp?id=<%=appointments.getId()%>"><button type="button"  class="btn btn-primary btn-block">Delete</button></a></td>
+                <td><a href="updatePageAppointment.jsp?id=<%=appointments.getId()%>&patient=<%=appointments.getPatient_id()%>"><button type="button"  class="btn btn-primary btn-block">Update</button></a></td>
 
             </tr>
 
         <% } %>
     </table>
-<br/>
-<br/>
-<h2>Add a patient</h2>
-
-    <form action="addPatient.jsp">
-        <div class="form-outline mb-4">
-            <input type="text" name="name" value="Name..." onclick="this.value=''"/><br/>
-        </div>
-        <div class="form-outline mb-4">
-            <input type="text" name="email"  value="Email..." onclick="this.value=''"/><br/>
-        </div>
-
-    <br/>
-
-    <input type="submit" value="Add Patient" class="btn btn-primary btn-block"/>
-
 </body>
 </html>

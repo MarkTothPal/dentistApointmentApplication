@@ -47,7 +47,7 @@
 
     <br/>
 
-    <input type="submit" value="Add Patient" class="btn btn-primary btn-block"/>
+    <input type="submit" value="Create appointment" class="btn btn-primary btn-block"/>
     </form>
 </body>
 </html>

@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12abdf85-3e6d-455f-9084-8f5fcbd1060c" name="Changes" comment="Stilizare">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/deleteAppointment.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updateAppointment.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/updatePageAppointment.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Patient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AppointmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/addAppointmentPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/addAppointmentPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/patientJsps/deletePatient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/deletePatient.jsp" afterDir="false" />
     </list>
-    <list id="d878ad09-4815-41d8-81c2-5d3124844179" name="Changes by Cosmin" comment="Changes by Cosmin">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/serviceJsps/serviceCatalog.jsp" afterDir="false" />
-    </list>
+    <list id="d878ad09-4815-41d8-81c2-5d3124844179" name="Changes by Cosmin" comment="Changes by Cosmin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,24 +51,6 @@
         <option name="url" value="https://github.com/MarkTothPal/dentistApointmentApplication" />
       </UrlAndAccount>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/webapp/patientJsps/patientCatalog.jsp">
-      <ranges>
-        <range start1="25" end1="26" start2="25" end2="26" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
-        <range start1="30" end1="31" start2="30" end2="31" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
-        <range start1="36" end1="39" start2="36" end2="39" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
-        <range start1="64" end1="64" start2="64" end2="65" changelist="12abdf85-3e6d-455f-9084-8f5fcbd1060c" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/webapp/appointmentJsps/appointmentCatalog.jsp">
-      <ranges>
-        <range start1="25" end1="26" start2="25" end2="26" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
-        <range start1="30" end1="31" start2="30" end2="31" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
-        <range start1="38" end1="39" start2="38" end2="39" changelist="d878ad09-4815-41d8-81c2-5d3124844179" />
-        <range start1="51" end1="51" start2="51" end2="52" changelist="12abdf85-3e6d-455f-9084-8f5fcbd1060c" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -276,7 +261,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691350527377</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Stilizare">
+      <option name="closed" value="true" />
+      <created>1691396332788</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1691396332788</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Changes by Cosmin">
+      <option name="closed" value="true" />
+      <created>1691396340020</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1691396340020</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

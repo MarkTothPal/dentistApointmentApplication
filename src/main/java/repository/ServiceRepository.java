@@ -1,6 +1,5 @@
 package repository;
 
-import model.Patient;
 import model.Service;
 
 import java.sql.*;
